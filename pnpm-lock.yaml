@@ -4,6 +4,9 @@ dependencies:
   '@types/lodash':
     specifier: ^4.14.194
     version: 4.14.194
+  dayjs:
+    specifier: ^1.11.7
+    version: 1.11.7
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
@@ -513,6 +516,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /dayjs@1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
+    dev: false
 
   /dotenv@10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
