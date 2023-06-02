@@ -8,12 +8,20 @@ export interface Env {
   RATES: KVNamespace;
 }
 
+const getResponse = (data: string) => {
+  return new Response(data, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+};
+
 const getData = async (env: Env) => {
   const date = getDate();
   const cachedRate = await env.RATES.get(date);
 
   if (cachedRate) {
-    return new Response(cachedRate);
+    return getResponse(cachedRate);
   } else {
     const response = await fetch(
       `https://openexchangerates.org/api/latest.json?app_id=${env.API_KEY}`,
@@ -28,7 +36,7 @@ const getData = async (env: Env) => {
 
     await env.RATES.put(date, data);
 
-    return new Response(data);
+    return getResponse(data);
   }
 };
 
