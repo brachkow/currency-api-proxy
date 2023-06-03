@@ -8,6 +8,11 @@ Cloudflare Workers proxy for Open Exchange Rates free API
 - Chronjob support — automaticaly create rates history inside KV
 - Authorization
 
+## ENV
+
+- `API_KEY` — your Open Exchange Rates API key
+- `KEY` — authoriztaion key
+
 ## How to use authorization
 
 Find «currency-api-KEYS» KV and add a record with any string you want use as Key, and «true» as Value.
