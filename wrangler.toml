@@ -2,5 +2,6 @@ name = "currency-api"
 main = "src/index.ts"
 compatibility_date = "2023-05-13"
 kv_namespaces = [
-  { binding = "RATES", id = "4d13cf60ea4b410bbb87cd33e0f4cd30", preview_id = "da64c14b7194474c8e865f14c7547d00" }
+  { binding = "RATES", id = "4d13cf60ea4b410bbb87cd33e0f4cd30", preview_id = "da64c14b7194474c8e865f14c7547d00" },
+  { binding = "KEYS", id = "022a8380ba044fc4b3f3f276631294bd", preview_id = "f03ac5d3abe3429786086a669b5e7e58" }
 ]

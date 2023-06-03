@@ -5,7 +5,9 @@ const getDate = () => dayjs().format('DD-MM-YYYY');
 
 export interface Env {
   API_KEY: string;
+  KEY: string;
   RATES: KVNamespace;
+  KEYS: KVNamespace;
 }
 
 const getResponse = (data: string) => {
@@ -50,6 +52,13 @@ export default {
     env: Env,
     ctx: ExecutionContext,
   ): Promise<Response> {
-    return await getData(env);
+    if (await env.KEYS.get(env.KEY)) {
+      return await getData(env);
+    } else {
+      return new Response('Unauthorized', {
+        status: 401,
+        statusText: 'Unauthorized',
+      });
+    }
   },
 };
